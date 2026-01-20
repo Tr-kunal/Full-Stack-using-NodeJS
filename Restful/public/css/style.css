@@ -1,0 +1,28 @@
+.card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card p {
+    margin: 5px;
+}
+
+.card p:first-child {
+    font-weight: bold;
+}
+
+.card p:last-child {
+    font-style: italic;
+}
+
+.card p:nth-child(2) {
+    color: #2196F3;
+}
