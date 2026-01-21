@@ -4,6 +4,7 @@ const port = 4000;
 
 app.set("view engine", "ejs");
 app.use(express.static("public"));
+app.use(express.urlencoded({ extended: true }));
 
 const users = require("./data/users");
 
@@ -13,6 +14,23 @@ app.get("/", (req, res) => {
 
 app.get("/users", (req, res) => {
     res.render("users", { users });
+});
+
+app.get("/users/new", (req, res) => {
+    res.render("new");
+});
+
+app.post("/users", (req, res) => {
+    const { name, age, password, city } = req.body;
+    const newUser = {
+        id: users.length + 1,
+        name,
+        age,
+        password,
+        city
+    };
+    users.push(newUser);
+    res.redirect("/users");
 });
 
 app.listen(port, () => {
