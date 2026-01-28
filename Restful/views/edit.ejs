@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit</title>
+</head>
+<body>
+    <h1>Edit User</h1>
+    <form action="/users/<%= user.id %>/edit" method="POST">
+        <label for="name">Name</label>
+        <input type="text" name="name" placeholder="Name" name="name">
+        <label for="age">Age</label>
+        <input type="text" name="age" placeholder="Age" name="age">
+        <label for="password">Password</label>
+        <input type="password" name="password" placeholder="Password" name="password">
+        <label for="city">City</label>
+        <input type="text" name="city" placeholder="City" name="city">
+        <button type="submit">update</button>
+    </form>
+</body>
+</html>

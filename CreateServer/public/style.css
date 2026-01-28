@@ -1,0 +1,30 @@
+p{
+    color: red;
+}
+img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid red;
+    margin: 10px;
+}
+h1{
+    color: blue;
+}
+a{
+    color: green;
+    text-decoration: none;
+    margin: 10px;
+}
+a:hover{
+    color: red;
+}
+a:active{
+    color: blue;
+}
+a:visited{
+    color: purple;
+}
+body{
+    background-color: #f5f5f5;
+}

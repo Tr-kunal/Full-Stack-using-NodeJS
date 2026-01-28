@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>show</title>
+</head>
+<body>
+    <h1><%= user.name %></h1>
+    <p>Age: <%= user.age %></p>
+    <p>Password: <%= user.password %></p>
+    <p>City: <%= user.city %></p>
+    <a href="/users/<%= user.id %>/edit">Edit</a>
+    <a href="/users/<%= user.id %>/delete">Delete</a>
+</body>
+</html>

@@ -20,6 +20,18 @@ app.get("/users/new", (req, res) => {
     res.render("new");
 });
 
+app.get("/users/:id", (req, res) => {
+    const {id} = req.params;
+    const user = users.find((u) => u.id == id);
+    res.render("show", { user });
+});
+
+app.post("/users/:id/edit", (req, res) => {
+    const {id} = req.params;
+    const user = users.find((u) => u.id == id);
+    res.render("edit", { user });
+});
+
 app.post("/users", (req, res) => {
     const { name, age, password, city } = req.body;
     const newUser = {
